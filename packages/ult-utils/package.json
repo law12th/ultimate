@@ -1,0 +1,23 @@
+{
+	"name": "ult-utils",
+	"version": "1.0.0",
+	"main": "./build/index.js",
+	"types": "./build/index.d.ts",
+	"scripts": {
+		"clean": "del ./build/*",
+		"build": "npm run clean && tsc"
+	},
+	"devDependencies": {
+		"del-cli": "^5.0.0",
+		"eslint-config-custom": "*",
+		"tsconfig": "*",
+		"ult-constants": "*"
+	},
+	"dependencies": {
+		"@types/morgan": "^1.9.3",
+		"morgan": "^1.10.0",
+		"winston": "^3.8.2",
+		"winston-daily-rotate-file": "^4.7.1",
+		"winston-slack-webhook-transport": "^2.1.0"
+	}
+}
