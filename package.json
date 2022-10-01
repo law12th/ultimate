@@ -1,32 +1,35 @@
 {
-  "name": "ultimate",
-  "author": "Yengwe Tepula",
-  "description": "This is the ultimate applications holder",
-  "version": "0.0.0",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.ts,*.js,*.tsx,*.jsx": "npm run lint"
-  },
-  "devDependencies": {
-    "eslint-config-custom": "*",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.3",
-    "prettier": "latest",
-    "turbo": "latest"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "packageManager": "npm@8.5.5"
+	"name": "ultimate",
+	"author": "Yengwe Tepula",
+	"description": "This is the ultimate applications holder",
+	"version": "0.0.0",
+	"private": true,
+	"workspaces": [
+		"apps/auth",
+		"packages/eslint-config-custom",
+		"packages/tsconfig",
+		"packages/ult-constants",
+		"packages/ult-utils"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.ts,*.js,*.tsx,*.jsx": "npm run lint"
+	},
+	"devDependencies": {
+		"eslint-config-custom": "*",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.0.3",
+		"prettier": "latest",
+		"turbo": "latest"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"packageManager": "npm@8.5.5"
 }
