@@ -17,6 +17,7 @@ dist
 *.pem
 logs
 *.log
+.vscode
 
 # debug
 npm-debug.log*
