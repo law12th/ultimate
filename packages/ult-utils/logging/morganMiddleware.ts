@@ -1,5 +1,7 @@
 import morgan, { StreamOptions } from "morgan";
-import logger from ".";
+import { Logger } from ".";
+
+let logger = Logger.getLogger();
 
 const messageFormat =
 	":method :url :status :res[content-length] - :response-time ms";

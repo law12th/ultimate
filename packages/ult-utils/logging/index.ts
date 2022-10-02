@@ -1,6 +1,14 @@
 import transports from "./transportConfig";
 import createLogger from "./logger";
+import winston from "winston";
+export class Logger {
+	private static logger: winston.Logger;
 
-const logger = createLogger(transports);
+	static getLogger(): winston.Logger {
+		if (!Logger.logger) {
+			Logger.logger = createLogger(transports);
+		}
 
-export default logger;
+		return Logger.logger;
+	}
+}

@@ -1,8 +1,11 @@
 {
 	"extends": "tsconfig/base.json",
-	"include": ["."],
-	"exclude": ["node_modules", "build"],
 	"compilerOptions": {
-		"typeRoots": ["./global.d.ts", "./node_modules/@types"]
-	}
+		"typeRoots": ["./global.d.ts", "./node_modules/@types"],
+		"module": "CommonJS",
+		"outDir": "./build",
+		"target": "ES2016"
+	},
+	"include": ["."],
+	"exclude": ["node_modules", "build"]
 }

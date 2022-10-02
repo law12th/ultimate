@@ -11,7 +11,7 @@ const transports: Transport[] = [
 		type: TransportType.File,
 		options: {
 			filename: "error-%DATE%.log",
-			dirname: "./logs",
+			dirname: "./.logs",
 			level: "error",
 			datePattern: dateFormat,
 		},
@@ -20,17 +20,9 @@ const transports: Transport[] = [
 		type: TransportType.File,
 		options: {
 			filename: "all-%DATE%.log",
-			dirname: "./logs",
+			dirname: "./.logs",
 			level: "all",
 			datePattern: dateFormat,
-		},
-	},
-	{
-		type: TransportType.Slack,
-		options: {
-			webhookUrl: "slack:url",
-			name: "slack:username",
-			level: dateFormat,
 		},
 	},
 ];

@@ -4,7 +4,7 @@ export * from "./errors/NotFoundError";
 export * from "./errors/RequestValidationError";
 export * from "./errors/UnauthorizedError";
 
-export { default as logger } from "./logging";
+export * from "./logging";
 export { default as morganMiddleware } from "./logging/morganMiddleware";
 
 export * from "./middlewares/errorHandler";

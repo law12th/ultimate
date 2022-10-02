@@ -1,6 +1,6 @@
 import compression from "compression";
 import express from "express";
-import { errorHandler, NotFoundError } from "ult-utils";
+import { errorHandler, NotFoundError, morganMiddleware } from "ult-utils";
 
 const app = express();
 
@@ -12,5 +12,7 @@ app.all("*", async (_req, _res) => {
 });
 
 app.use(errorHandler);
+
+app.use(morganMiddleware);
 
 export default app;

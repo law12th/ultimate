@@ -4,9 +4,11 @@
 	"description": "The authentication service",
 	"main": "./src/index.ts",
 	"scripts": {
-		"start": "pm2-runtime ./src/index.ts",
-		"dev": "pm2-dev ./src/index.ts",
-		"test": "jest --watchAll --no-cache"
+		"start": "pm2-runtime ./build/index.js",
+		"dev": "pm2-dev ./build/index.js",
+		"test": "jest --watchAll --no-cache",
+		"clean": "del ./build",
+		"build": "npm run clean && tsc"
 	},
 	"jest": {
 		"preset": "ts-jest",
@@ -23,13 +25,16 @@
 		"express": "^4.18.1",
 		"express-async-errors": "^3.1.1",
 		"express-validator": "^6.14.2",
+		"pg": "^8.8.0",
 		"ult-constants": "*",
 		"ult-utils": "*"
 	},
 	"devDependencies": {
 		"@types/compression": "^1.7.2",
 		"@types/jest": "^29.1.1",
+		"@types/pg": "^8.6.5",
 		"@types/supertest": "^2.0.12",
+		"del-cli": "^5.0.0",
 		"dotenv": "^16.0.3",
 		"eslint-config-custom": "*",
 		"jest": "^29.1.2",
